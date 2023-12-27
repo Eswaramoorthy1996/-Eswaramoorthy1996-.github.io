@@ -1,0 +1,448 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* =================================navigation=========================== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    position: relative;
+}
+.logo{
+    font-size: 20px;
+    color: gray;
+    font-weight: bolder;
+}
+/* this is 3 line */
+.togg-btn{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.togg-btn .bar{
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: gray;
+    margin:3px 0px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+.nav-links li{
+    margin-right: 30px;
+}
+.nav-links li a{
+    font-size: 18px;
+    color: gray;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+/* .nav-links li :hover{
+    color: #1f376b;
+} */
+.icons i{
+    margin: 0px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* ==============================End Nav============================ */
+
+
+
+/* ================================Start Curosal===================== */
+.slideshow{
+    position: relative;
+} 
+.pre, .nxt{
+    position: absolute;
+    top : 50%;
+    cursor: pointer;
+    padding: 15px;
+    color: maroon;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: -30px;
+}
+.nxt{
+    right: 0;
+    
+}
+.pre:hover, .nxt:hover{
+   background-color:  rgb(51, 9, 9);
+}
+.slider img{
+    width: 100%;
+    height:500px;
+}
+.slider
+{
+    display: none;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 50%;
+}
+.active, .dot:hover{
+    background-color: black;
+}
+
+/* ================================end curosal================= */
+
+
+/* ================================card section================= */
+
+
+
+/* ====================card section============ */
+.cardcontainer{
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:20px;
+}
+.cards{
+   background-color: #fff;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.img-sec{
+    height: 224px;
+    /* background-color: red; */
+}
+.cards .img1{
+    background-image:url(./grapes.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img2{
+    background-image:url(./mixed-frts.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img3{
+    background-image:url(./orange.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* dummy========
+ */
+
+ .cards .img4{
+    background-image:url(./pumkins_seeds.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img5{
+    background-image:url(./rice.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img6{
+    background-image:url(./wheat.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img7{
+    background-image:url(./potato_chips.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img8{
+    background-image:url(./nachos.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img9{
+    background-image:url(./fresh-potatoes.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contant{
+    padding: 20px 10px;
+    text-align: center;
+}
+.contant h2{
+    letter-spacing: 1.5px;
+}
+.contant p{
+    margin: 15px 0px;
+}
+.contant a{
+    text-decoration: none;
+    color: #fff;
+    display: inline;
+    background-color: #66c20a;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* ================================end card section============ */
+
+
+/* ==============================Form sections=================== */
+.formbody{
+    background: rgb(2, 24, 65);
+    background: linear-gradient(90deg, rgba(152, 147, 173, 0.589) 0%, rgb(48, 48, 134) 30%, rgb(59, 172, 79) 97%);
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formcontainer{
+    background-color: rgb(216,214,212);
+    box-shadow: rgb(0,0,0) 0px 5px 15px;
+    width: 420px;
+    border-radius: 5px;
+}
+.header{
+    text-align: center;
+    background-color:#2a0846;
+    color: #f0f0f0;
+    padding: 20px 40px;
+    border: 1px solid #494848;
+    border-radius: 2px;
+}
+.form{
+    padding: 30px 40px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position:relative;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 1px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    font-size:15px;
+    width: 100%;
+    padding: 10px;
+}
+.form-control::placeholder{
+    color: #2a0845;
+}
+.form-control i{
+    position: absolute;
+    right: 10px;
+    top: 33px;
+    visibility: hidden;
+}
+.form-control span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    font-style: italic;
+    visibility: hidden;
+}
+.form-control.success input{
+    border-color: rgb(50, 182, 50);
+}
+.form-control.error input{
+   border-color: #da321f;
+}
+.form-control.error span{
+    color: #da321f;
+    visibility: visible;
+}
+.form-control.success i.fa-circle-check{
+    visibility: visible;
+    color: rgb(50, 182, 50);
+}
+.form-control.error i.fa-circle-exclamation{
+    visibility: visible;
+    color: #da321f;
+}
+.form #submit{
+    background-color: #2a0846;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all .5s;
+}
+.form #submit:hover{
+    background-color: #6441aa;
+}
+
+
+/* =================================End form section */
+
+/*========================footer section=================================================*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color:lightgreen;
+    padding: 50px 10%;
+}
+ul{
+    list-style: none;
+
+}
+.f-col{
+    width: 25%;
+}
+.f-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: maroon;
+    text-transform: capitalize;
+
+}
+.f-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+ul li a{
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+} 
+ul li a:hover{
+    color: green;
+    padding-left:2px ;
+}
+.links-social  a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-color: rgba(40, 120,213, 0.8);
+    margin: 10px 5px;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 10%;
+}
+.links-social  a:hover{
+    color: #4d4d4d;
+    background-color: white;
+}
+/* ==========================================end footer============================= */
+
+
+/*=================copy write ==================== */
+
+.foot{
+    width: 100%;
+    background-color: rgb(95, 76, 76);
+    text-align: center;
+    color: #f4f4f4;
+}
+.company-name{
+    font-size: 1.3rem;
+    padding: 10px;
+    /* margin-top: 0.1rem; */
+}
+/* ===================End copy write==================  */
+
+
+
+
+
+
+
+
+/* ================================================Media Query================================== */
+
+/* -----------------nav------------------------- */
+@media screen and (max-width: 768px)
+{
+    .navbar{
+        padding: 20px 25px;
+    }
+    .togg-btn{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color:lightgreen;
+        padding: 25px;
+        top: 100%;
+        left: 0px;
+    }
+    .nav-links li{
+        padding: 12px 0px;
+    }
+    .nav-links.active{
+        display: block;
+        text-align: center;
+    }
+}
+/* --------------------end nav--------------------- */
+
+/* -------------------footer section media query---------- */
+@media (max-width: 740px) {
+    .f-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .f-col h4::before{
+        all:unset;
+
+    }
+}
+@media (max-width: 555px) {
+    .f-col{
+        width: 100%;
+    }
+}
+/* -----------------End footer media query---------------------- */
+/* ---------------------copy writes -----------*/
+@media (max-width: 500px){
+    .company-name{
+        font-size: 0.5rem;
+        padding: 10px;
+    }
+}    
+@media(min-width: 501px) and (max-width: 768px){
+    .company-name{
+    font-size: 0.8rem;
+    padding: 10px;
+    }
+}    
+/*---------------end copy---------------------------*/
