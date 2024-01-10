@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkJob</title>
+    <!-- *******page style******* -->
+    <link rel="shortcut icon" type="x-icon" href="images/browser_icon_crop.png">
+     <link rel="stylesheet" href="css/LinkJob.css">
+</head>
+<body>
+    <!-- *******header******* -->
+    <header class="header">
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+            <a href="Index.html" class="logo"><img src="images/browser_icon_crop.png" alt="">LinkJob</a>
+
+            <nav class="navbar">
+                <a href="Index.html">Home</a>
+                <a href="jobs.html">job</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact us</a>
+                <a href="login.html">Account</a>
+                <!-- <a href="login.html">login</a> -->
+            </nav>
+
+            <a href="#" class="btn" >Post Job</a>            
+        </section>
+    </header>
+
+<!-- ********* account section start*********** -->
+
+<div class="action-form-container">
+
+    <section class="account-form">
+    
+        <form action="" id="form" method="post">
+            <h3>create an account !</h3>
+            <div class="input-group ">
+                <input type="text" id="username" required name="name" maxlength="20" placeholder="enter your name" class="input">
+                <span class="error"></span>
+            </div>    
+                
+            <div class="input-group ">
+                <input type="email" id="email" required name="email" maxlength="50" placeholder="enter your email" class="input"> 
+                <span class="error"></span> 
+            </div>
+
+            <div class="input-group">
+                <input type="password" required name="pass" maxlength="20" placeholder="enter your password" class="input" id="password">
+                <span class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required name="c_pass" maxlength="20" placeholder="confirm your password" class="input" id="cpassword">
+                <span class="error"></span>
+            </div>
+
+            <p>already have an account? <a href="login.html"> login now</a></p>
+            <input type="submit" value="login now" name="submit" class="btn">
+        </form>
+    
+    </section>
+
+</div>
+
+
+
+
+    <!-- *******footer******* -->
+    <footer class="footer">
+        <section class="grid">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="Index.html"><i class="fas fa-angle-right"></i>Home</a>
+                <a href="about.html"><i class="fas fa-angle-right"></i>About</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>Contact us</a>
+               
+                <a href="#"><i class="fas fa-angle-right"></i>Filter Search</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="fas fa-angle-right"></i>account</a>
+                 <!-- <a href="login.html"><i class="fas fa-angle-right"></i>login</a> -->
+                 <a href="register.html"><i class="fas fa-angle-right"></i>Register</a>
+                 <a href="#"><i class="fas fa-angle-right"></i>Post Job</a>
+                 <a href="#"><i class="fas fa-angle-right"></i>Dashboard</a>
+            </div>
+            <div class="box">
+                <h3>Follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+                <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+            </div>
+        </section>
+        <div class="credit">&copy; copyright @2024 by <span>mr. &#398;&Scirc; &#803;org</span> | all rights reserved!</div>
+    </footer>
+
+   <!-- *******page style******* -->
+    <script src="js/LinkJob.js"></script>
+</body>
+</html>
