@@ -1,0 +1,268 @@
+
+:root{
+  --brand-colour: rgba(0, 91, 74, 0.718);
+}
+
+body{
+   background-color: rgba(0, 91, 74, 0.718);
+}
+/* 
+.bg {
+    padding: 10px;
+    background-color: #563d7c26;
+    border: 1px solid rgba(86, 61, 124, 0.2);
+} */
+
+/* **************** nave bar **************** */
+
+.navbar{
+    height: 72px;
+    position: sticky; 
+    top:0px;
+    z-index: 5;
+}
+
+.navbar-brand .crop {
+  margin-left: 40px;
+    width: 90px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.navbar-brand img{
+    width: 100%;
+    height: auto;
+}
+
+.navbar-collapse a{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.menu{
+  text-transform:uppercase ;
+}
+
+.login{
+  text-transform: capitalize;
+}
+
+
+.navbar-collapse ul li a:hover {
+  color: var(--brand-colour) !important;
+  /* background-color: palevioletred; */
+
+}
+
+/* **************** carousel **************** */
+
+.carousel {
+    height: 300px;
+}
+
+.carousel img{
+  height: 300px;
+  /* width: auto !important; */
+}
+
+/* **************** grid body **************** */
+
+
+
+.container .row .crdCol img{
+    height: 300px;
+    width: auto;
+    overflow: hidden;
+}
+
+ .card-title ,.card-text{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+/* .card-body a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* ***************modal**************** */
+/* ***************login modal**************** */
+.mr{
+  margin-right: 10px;
+}
+
+.createAcc{
+  padding-left: 1px !important;
+}
+
+.form-check-inline label{
+  font-size: small;
+}
+
+/* ***************information modal**************** */
+  .modal-header{
+    background-color:var(--brand-colour);
+   }
+   .modal-header .welcome{
+    margin-left: 17px;
+   }
+  
+  /* .modal-header h5{
+    margin: 2px;
+    border-bottom: 2px solid black;
+  } */
+  
+  .modal-header p{
+    /* background-color: rgba(0, 255, 0, 0.425); */
+    margin-top: 0; /* Adjust the margin-top as per your design */
+  }
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-body label{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+
+  .modal-body img{    
+    height: 250px;
+    width: auto;
+    margin: 10px;
+  }
+
+  .equipBody{
+    display: block;
+  } 
+
+  .equipBody .equipImage{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
+
+
+ 
+ .modal-footer .row  {
+   width: 100%;
+ }
+ 
+ .modal-footer a:hover{
+   cursor: pointer;
+   color:var(--brand-colour) !important;
+ }
+ 
+
+
+  /* **************footer************** */
+
+
+ 
+  
+  /* Align list items to the left */
+ 
+  .emergency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.emergency .txt{
+  font-size: medium;
+}
+
+
+
+
+  h5 ,.list-group-item {
+    border: none ;
+    background-color: transparent ;
+    text-align: center;
+    padding-left: 30px;
+  }
+
+  .list-group-item a{
+    text-decoration: none;
+    color: rgb(56, 41, 34);
+  }
+
+  .list-group-item a:hover{    
+    color: white;
+    text-decoration:underline;
+  }
+
+
+  /* ************** copy rights************** */
+  .copy-rights{
+    background-color: rgb(113, 113, 161);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .fa-md{
+    display: flex;
+    justify-content: center;
+  } */
+
+  .fa-facebook:hover{
+    color: 	#1877F2;
+    cursor: pointer;
+  }
+
+  .fa-x-twitter:hover{
+    color: 	white;
+    cursor: pointer;
+  }
+
+  .fa-instagram:hover{
+    color: rgb(63, 144, 251);
+    cursor: pointer;
+   
+  }
+  
+  .fa-youtube:hover{
+    color: 	#FF0000;
+  }
+
+  .copy-rights p{
+    color: black;
+  }
+
+  /* .copy-rights .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .copy-rights .contact a{
+    color: black;
+  }
+
+  @media (max-width: 990px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 10px; 
+        border-radius: 5px; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    }
+}
+
+@media (max-width: 480px) {
+  .modal-body {
+    display: grid;   
+  }
+
+  .modal-body img{    
+    height: 200px;
+    width: auto;
+    margin: 10px;
+  }
+}
