@@ -1,10 +1,28 @@
-
-:root{
+/* *{
+  overflow-x: hidden;
+} */
+:root {
   --brand-colour: rgba(0, 91, 74, 0.718);
 }
 
-body{
-   background-color: rgba(0, 91, 74, 0.718);
+
+
+body {
+  background-color: rgba(0, 91, 74, 0.718);
+  overflow-x: hidden; 
+}
+
+.center{
+  display: flex !important;
+  text-align-last: center;
+  justify-content: center;
+}
+.pasHei{
+  height: 50px;
+}
+
+.pasErr{
+  margin-top: -41px;
 }
 /* 
 .bg {
@@ -15,254 +33,335 @@ body{
 
 /* **************** nave bar **************** */
 
-.navbar{
-    height: 72px;
-    position: sticky; 
-    top:0px;
-    z-index: 5;
+.navbar {
+  height: 72px;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
 }
 
 .navbar-brand .crop {
   margin-left: 40px;
-    width: 90px;
-    height: 45px;
-    overflow: hidden;
+  width: 90px;
+  height: 45px;
+  overflow: hidden;
 }
 
-.navbar-brand img{
-    width: 100%;
-    height: auto;
+.navbar-brand img {
+  width: 100%;
+  height: auto;
 }
 
-.navbar-collapse a{
+.navbar-collapse a {
   font-size: 1.3rem;
   cursor: pointer;
 }
 
-.menu{
-  text-transform:uppercase ;
+.menu {
+  text-transform: uppercase;
+  margin-right: 2rem !important;
 }
 
-.login{
+.login {
   text-transform: capitalize;
 }
-
 
 .navbar-collapse ul li a:hover {
   color: var(--brand-colour) !important;
   /* background-color: palevioletred; */
+}
+
+.dropdown .dropdown-menu{
+  position: absolute;
+  right:20px !important;
+}
+
+.popSide{
+  display: none;
+}
+
+#innerDrop:hover .popSide{
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: -170px;
+  width: 170px;
+  height:80px;
+  border: solid rgba(0, 0, 0, 0.671) 0.1px;
+  background-color: white;  
+  border-radius: 10px;
+  box-shadow: black 10px;
+}
+ 
+ .popSide ul{
+  display: block;
+  /* position: absolute; */
+  margin: 3px;
+  text-align: left;
+ 
+}
+
+.popSide ul{
+  list-style-type: none;
+  padding: 8px;
+  
 
 }
+
+.popSide ul a{
+  font-size: 15px;
+ text-align: left;
+  text-decoration:none
+}
+
 
 /* **************** carousel **************** */
 
 .carousel {
-    height: 300px;
+  height: 500px;
 }
 
-.carousel img{
-  height: 300px;
+.carousel img {
+  height: 500px;
   /* width: auto !important; */
 }
 
 /* **************** grid body **************** */
-
-
-
-.container .row .crdCol img{
-    height: 300px;
-    width: auto;
-    overflow: hidden;
-}
-
- .card-title ,.card-text{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-/* .card-body a{
+.crdCol {
   display: flex;
-  justify-content: center;
   align-items: center;
-} */
+  justify-content: center;
+}
+
+.container .row .crdCol img {
+  height: 300px;
+  width: auto;
+  overflow: hidden;
+}
+
+.card-title {
+  padding: 0;
+}
 
 /* ***************modal**************** */
 /* ***************login modal**************** */
-.mr{
+.mr {
   margin-right: 10px;
 }
 
-.createAcc{
+.createAcc {
   padding-left: 1px !important;
 }
 
-.form-check-inline label{
+.form-check-inline label {
   font-size: small;
 }
 
+.passHide{
+  position: relative;
+  bottom: 40px;
+  left: 260px;
+  cursor: pointer;
+}
+
+.passHide img{
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* ***************account modal**************** */
+#userLog{
+  position: absolute;
+  top: 20px;
+  right: 0px !important;
+}
+
 /* ***************information modal**************** */
-  .modal-header{
-    background-color:var(--brand-colour);
-   }
-   .modal-header .welcome{
-    margin-left: 17px;
-   }
-  
-  /* .modal-header h5{
+.modal-header {
+  background-color: var(--brand-colour);
+}
+.modal-header .welcome {
+  margin-left: 17px;
+}
+
+/* .modal-header h5{
     margin: 2px;
     border-bottom: 2px solid black;
   } */
-  
-  .modal-header p{
-    /* background-color: rgba(0, 255, 0, 0.425); */
-    margin-top: 0; /* Adjust the margin-top as per your design */
-  }
-  .modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .modal-body label{
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-  }
-
-  .modal-body img{    
-    height: 250px;
-    width: auto;
-    margin: 10px;
-  }
-
-  .equipBody{
-    display: block;
-  } 
-
-  .equipBody .equipImage{
-      display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
-
-
-
- 
- .modal-footer .row  {
-   width: 100%;
- }
- 
- .modal-footer a:hover{
-   cursor: pointer;
-   color:var(--brand-colour) !important;
- }
- 
-
-
-  /* **************footer************** */
-
-
- 
-  
-  /* Align list items to the left */
- 
-  .emergency {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.modal-header p {
+  /* background-color: rgba(0, 255, 0, 0.425); */
+  margin-top: 0; /* Adjust the margin-top as per your design */
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.emergency .txt{
+.modal-body label {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.modal-body img {
+  height: 250px;
+  width: auto;
+  margin: 10px;
+}
+
+.equipBody {
+  display: block;
+}
+
+.equipBody .equipImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-footer .row {
+  width: 100%;
+}
+
+.modal-footer a:hover {
+  cursor: pointer;
+  color: var(--brand-colour) !important;
+}
+
+
+/* ***************user modal**************** */
+.dataVMod{
+  display: grid;
+}
+
+.userImage img{
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+
+/* **************footer************** */
+
+/* Align list items to the left */
+
+.emergency {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.emergency .txt {
   font-size: medium;
 }
 
+h5,
+.list-group-item {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  padding-left: 30px;
+}
 
+.list-group-item a {
+  text-decoration: none;
+  color: rgb(56, 41, 34);
+}
 
+.list-group-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
 
-  h5 ,.list-group-item {
-    border: none ;
-    background-color: transparent ;
-    text-align: center;
-    padding-left: 30px;
-  }
+/* ************** copy rights************** */
+.copy-rights {
+  background-color: rgb(113, 113, 161);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .list-group-item a{
-    text-decoration: none;
-    color: rgb(56, 41, 34);
-  }
-
-  .list-group-item a:hover{    
-    color: white;
-    text-decoration:underline;
-  }
-
-
-  /* ************** copy rights************** */
-  .copy-rights{
-    background-color: rgb(113, 113, 161);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* .fa-md{
+/* .fa-md{
     display: flex;
     justify-content: center;
   } */
 
-  .fa-facebook:hover{
-    color: 	#1877F2;
-    cursor: pointer;
-  }
+.fa-facebook:hover {
+  color: #1877f2;
+  cursor: pointer;
+}
 
-  .fa-x-twitter:hover{
-    color: 	white;
-    cursor: pointer;
-  }
+.fa-x-twitter:hover {
+  color: white;
+  cursor: pointer;
+}
 
-  .fa-instagram:hover{
-    color: rgb(63, 144, 251);
-    cursor: pointer;
-   
-  }
-  
-  .fa-youtube:hover{
-    color: 	#FF0000;
-  }
+.fa-instagram:hover {
+  color: rgb(63, 144, 251);
+  cursor: pointer;
+}
 
-  .copy-rights p{
-    color: black;
-  }
+.fa-youtube:hover {
+  color: #ff0000;
+}
 
-  /* .copy-rights .contact{
+.copy-rights p {
+  color: black;
+}
+
+/* .copy-rights .contact{
     display: flex;
     justify-content: center;
     align-items: center;
   } */
 
-  .copy-rights .contact a{
-    color: black;
+.copy-rights .contact a {
+  color: black;
+}
+
+@media (max-width: 990px) {
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 
-  @media (max-width: 990px) {
-    .navbar-collapse {
-        background-color: rgba(255, 255, 255, 0.9); 
-        padding: 10px; 
-        border-radius: 5px; 
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-    }
+  #innerDrop:hover .popSide{
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 15%;
+    width:170px;
+    height:120px;
+    /* padding: 3px; */
+    /* margin: 5px; */
+
+
+  }
 }
 
 @media (max-width: 480px) {
-  .modal-body {
-    display: grid;   
+  .modal-body,
+  .copy-rights {
+    display: grid;
+  }
+  .MailCont {
+    margin-left: 10px;
   }
 
-  .modal-body img{    
+  .modal-body img {
     height: 200px;
     width: auto;
     margin: 10px;
+  }
+
+  .cont{
+    margin-left: 1.5rem;
   }
 }

@@ -14,9 +14,14 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
 
 
     <link rel="stylesheet" href="hospital.css">
@@ -67,50 +72,82 @@
                     </li>
 
                     <li class="nav-item ps-5 login mt-2 bg">
-                        <a data-bs-toggle="modal"
-                        data-bs-target="#reviewModal" data-bs-whatever="@mdo" 
-                        >Login</a>
+                        <a data-bs-toggle="modal" data-bs-target="#loginMod" data-bs-whatever="@mdo" id="loginBtn"
+                            style="display: none;">Login</a>
+
+                    </li>
+                    <li class="nav-item dropdown" id="account">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#userModal">Profile</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Patients </a></li>
+
+                            <li id="innerDrop">
+                                <a class="dropdown-item innerDrop" href="#">settings </a>
+
+                                <div class="popSide ">
+                                    <ul>
+                                        <li><a href="" data-bs-toggle="modal" data-bs-target="#chaPassMod">Change
+                                                password</a></li>
+
+                                        <li><a href="">Help and support</a></li>
+
+                                    </ul>
+                                </div>
+
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a type="button" href="#" class="dropdown-item" onclick="logOutBtn()">logout</a></li>
+                        </ul>
                     </li>
 
+
                 </ul>
-           
+
             </div>
         </div>
     </nav>
 
-     <!----------- carousel -------------->
+    <!----------- carousel -------------->
 
-     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="5000">
-            <img src="images/Caurosel-5.jpeg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="images/Caurosel-6.jpeg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="images/Caurosel-7.jpeg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="images/Caurosel-8.jpeg" class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="images/s1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/s3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/s5.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 
     <!---------------------------- body---------------------------->
     <div class="container text-center ">
 
         <!-------------------- Doctors -------------------->
         <div class="row" id="doctor" style="padding-top: 72px;">
-            <h1 class="col mt-2 bg"  >
+            <h1 class="col mt-2 bg">
                 DOCTORS
             </h1>
         </div>
@@ -118,14 +155,25 @@
         <div class="row">
             <div class="col crdCol mt-2 bg d-flex justify-content-center align-item-center">
                 <div class="card" style="width: 18rem;">
-                    
 
-                    <img src="/images/OrthoDr.jpeg" class="card-img-top" alt="...">
+
+                    <img src="images/OrthoDr.jpeg" class="card-img-top" alt="...">
 
                     <div class="card-body ">
-                        <h5 class="card-title">Orthopedics</h5>
-                        <p class="card-text">  Dr.Ravi Kumar</p>
-                        <a href="#" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Ravi">View Details</a>
+                        <h5 class="card-title" style="padding: 0;">Orthopedics</h5>
+                        <p class="card-text"> Dr.Ravi Kumar</p>
+
+                        <div class="row" style="width: 100%; margin-left: 1.5px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#bookDr.Ravi">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Dr.Ravi">View</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -133,9 +181,19 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/CardioDr.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Cardiology</h5>
-                        <p class="card-text">  Dr.Balakrishnan</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Bala">View Details</a>
+                        <h5 class="card-title" style="padding: 0;">Cardiology</h5>
+                        <p class="card-text"> Dr.Balakrishnan</p>
+                        <div class="row" style="width: 100%; margin-left: 1px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Dr.Bala">View
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -143,9 +201,20 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/PerdiatitionDr.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Prediatition</h5>
+                        <h5 class="card-title" style="padding: 0;">Prediatition</h5>
                         <p class="card-text">Dr.Buvana</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Buvana">View Details</a>
+
+                        <div class="row" style="width: 100%; margin-left: 1px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Dr.Buvana">View
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -163,9 +232,19 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/GastroDr.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Gastro</h5>
-                        <p class="card-text" >  Dr.Pal Manikam</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Pal">View Details</a>
+                        <h5 class="card-title" style="padding: 0;">Gastro</h5>
+                        <p class="card-text"> Dr.Pal Manikam</p>
+
+                        <div class="row" style="width: 100%; margin-left: 1px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Pal">View
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -175,7 +254,18 @@
                     <div class="card-body">
                         <h5 class="card-title">Neurosurgeons</h5>
                         <p class="card-text">Dr.Balamurali</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Balamurali">View Details</a>
+
+                        <div class="row" style="width: 100%; margin-left: 1px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Dr.Balamurali">View
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -185,14 +275,25 @@
                     <div class="card-body">
                         <h5 class="card-title">Cardio</h5>
                         <p class="card-text">Dr.Balakrishnan</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Dr.Bala">View Details</a>
+
+                        <div class="row" style="width: 100%; margin-left: 1px;">
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">Book</a>
+                            </div>
+                            <div class="col-6 bg">
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Dr.Bala">View
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!-------------------- Specialities -------------------->
-        
+
         <div class="row" id="specal" style="padding-top: 72px;">
             <h1 class="col mt-2 bg">
                 SPECIALITIES
@@ -205,8 +306,10 @@
                     <img src="images/SpecGastro.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Gastroenterologist</h5>
-                        <p class="card-text"> specialists that treat digestive, gastrointestinal, as well as liver disorders and diseases </p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eeg">View Details</a>
+                        <p class="card-text"> specialists that treat digestive, gastrointestinal, as well as liver
+                            disorders and diseases </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eeg">View
+                        </a>
                     </div>
                 </div>
             </div>
@@ -216,8 +319,10 @@
                     <img src="images/SpecOrtho.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Orthopedist</h5>
-                        <p class="card-text">specializes in diagnosing and treating problems with the bones, joints, muscles, and ligaments.</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mri">View Details</a>
+                        <p class="card-text">specializes in diagnosing and treating problems with the bones, joints,
+                            muscles, and ligaments.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mri">View
+                        </a>
                     </div>
                 </div>
             </div>
@@ -227,8 +332,10 @@
                     <img src="images/EquiTranscatheterAorticValveReplacement.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Cardiologist</h5>
-                        <p class="card-text">It is a expert in the care of your heart and blood vessels who treat or help to prevent problems. </p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tavr">View Details</a>
+                        <p class="card-text">It is a expert in the care of your heart and blood vessels who treat or
+                            help to prevent problems. </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tavr">View
+                        </a>
                     </div>
                 </div>
             </div>
@@ -237,418 +344,671 @@
 
     </div>
 
-<hr>
-<!-------------------- About Us -------------------->
+    <hr>
+    <!-------------------- About Us -------------------->
 
 
-<div class="row footer mt-4" id="about" >
-    <div class="col-md-1 bg">
-        
-    </div>
+    <div class="row footer mt-4" id="about">
+        <div class="col-md-1 bg">
 
-    <div class="col-md-3 emergency bg">
-        
-        <!-- emergency  -->
+        </div>
+
+        <div class="col-md-3 emergency bg">
+
+            <!-- emergency  -->
 
 
             <h6 class="link-danger pb-0 mb-0  ">Get Information About Us</h6>
             <p class="small   pb-0 mb-0 txt">Subscribe Our Newsletter</p>
-           
+
             <form id="form-subscribe-news-letter">
                 <div class="pt-2 mb-2">
-                    <input type="email" class="form-control" id="userEmail" name="email" placeholder="Enter your email id">
+                    <input type="email" class="form-control" id="userEmail" name="email"
+                        placeholder="Enter your email id">
                 </div>
                 <p><button type="submit" class="btn btn-primary w-100 ft-btn">Submit</button></p>
             </form>
-                                   
-            <div>                
+
+            <div>
                 <h6><i class="fa-solid fa-phone"></i> Emergency</h6>
-                <p><a href="tel:1111">1111</a></p>            
+                <p><a href="tel:1111">1111</a></p>
             </div>
-                       
-                    
 
 
-                   
-        
-        <div>
-        <h6><i class="fa-solid fa-phone"></i>Health Help Line</h6>
-        <p><a href="tel:1860-500-1066">1234-567-8910</a></p>              
+
+
+
+
+            <div>
+                <h6><i class="fa-solid fa-phone"></i>Health Help Line</h6>
+                <p><a href="tel:1860-500-1066">1234-567-8910</a></p>
+            </div>
+
         </div>
-        
+
+        <div class="col  bg">
+            <h5>Information</h5>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="">About</a></li>
+                <li class="list-group-item"><a href="">Visitors</a></li>
+                <li class="list-group-item"><a href="">Events</a></li>
+                <li class="list-group-item"><a href="">Health Care Stories</a></li>
+                <li class="list-group-item"><a href="">Health Care Information</a></li>
+            </ul>
+        </div>
+        <div class="col bg">
+            <h5>Our Services</h5>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="">Contact Us</a></li>
+                <li class="list-group-item"><a href="">Testimonies</a></li>
+                <li class="list-group-item"><a href="">Our Doctors</a></li>
+                <li class="list-group-item"><a href="">Specialties</a></li>
+                <li class="list-group-item"><a href=""></a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="col  bg">
-        <h5>Information</h5>
-        <ul class="list-group">
-            <li class="list-group-item"><a href="">About</a></li>
-            <li class="list-group-item"><a href="">Visitors</a></li>
-            <li class="list-group-item"><a href="">Events</a></li>
-            <li class="list-group-item"><a href="">Health Care Stories</a></li>
-            <li class="list-group-item"><a href="">Health Care Information</a></li>
-          </ul>
-    </div>
-    <div class="col bg">
-        <h5>Our Services</h5>
-        <ul class="list-group">
-            <li class="list-group-item"><a href="">Contact Us</a></li>
-            <li class="list-group-item"><a href="">Testimonies</a></li>
-            <li class="list-group-item"><a href="">Our Doctors</a></li>
-            <li class="list-group-item"><a href="">Specialties</a></li>
-            <li class="list-group-item"><a href=""></a></li>
-          </ul>
-    </div>
-</div>
+    <!-------------------- Footer -------------------->
 
-<!-------------------- Footer -------------------->
-
-<div class="row copy-rights" id="contact">
-    <!-- <div class="col-md-1 bg">
+    <div class="row copy-rights" id="contact">
+        <!-- <div class="col-md-1 bg">
         
     </div> -->
-    <div class="col m-4 bg">
-        <div class="row mt-2 ">
-            <div class="col-md-12 bg">
-                <p> &#169; Horizons Hospital | All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col bg d-flex ">
-        <div class="row">
-            <div class="col bg">
-                <i class="fa fa-facebook-square"></i>
-            </div>
-            <div class="col bg">
-                <i class="fa fa-x-twitter fa-xl"></i>
-            </div>
-            <div class="col bg">
-                <i class="fa-brands fa-instagram fa-xl"></i>
-            </div>
-            <div class="col bg">
-                <i class="fa-brands fa-youtube fa-xl"></i>
-            </div>
-        </div>
-    </div>
-    <div class="col bg"> 
-        <div class="row mt-2 ">
-            <div class="col-md-4 bg">
-                <p><i class="fa-solid fa-phone"></i>Dial :</p>
-            </div>
-            <div class="col-md-6 bg">
-                <p> +91-9634728456</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 bg">
-                <p><i class="fa-regular fa-envelope"></i>  email :</p>
-            </div>
-            <div class="col-md-6 bg">
-                <p>qweiyd@horizonshospital.org</p> 
-            </div>
-        </div>
-           
-    </div>
-</div>
-
-<!----------------------------MODEL---------------------------->
-        
-     <!----------------- login Modal ----------------->
-<div class="modal fade" id="reviewModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-    <div class="modal-dialog">
-
-    <div class="modal-content">
-        
-        <div class="modal-header">           
-
-                <h5 class="modal-title welcome" id="staticBackdropLabel">Welcome To Horizon</h5>
-
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        
-        <div class="modal-body">
-<!------------------- form ------------------->
-            <form>
-                <div class="row mb-3 bg">
-                  <label for="inputEmail3" class="col-lg-3 col-form-label m-0">User Id</label>
-                  <div class="col-lg-9">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter User Id or e-mail">
-                  </div>
+        <div class="col m-4 bg">
+            <div class="row mt-2 ">
+                <div class="col-md-12 bg" style="margin-left: 1.5rem;">
+                    <p> &#169; Horizons Hospital | All Rights Reserved.</p>
                 </div>
-                <div class="row mb-3">
-                  <label for="inputPassword3" class="col-lg-3  col-form-label">Password</label>
-                  <div class="col-lg-9">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Enter Passward">
-                  </div>
-                </div>   
-                <button type="reset" class="btn btn-outline-warning mr">Reset</button>            
-                <button type="submit" class="btn btn-primary">Sign in</button>
-              </form>        
+            </div>
         </div>
-
-        <div class="modal-footer bg">
+        <div class="col bg center ">
             <div class="row">
-                <div class="col-md-5 bg">
-                  <p>New User ? <a data-bs-toggle="modal" data-bs-target="#signUP">Sign up</a></p>
+                <div class="col bg">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
                 </div>
-                <div class="col-md-2 bg">
-                 
+                <div class="col bg">
+                    <i class="fa-brands fa-x-twitter fa-xl"></i>
                 </div>
-                <div class="col-md-5 bg">
-                  <a href="" data-bs-toggle="modal" data-bs-target="#forgot">Forgot Password ?</a>
+                <div class="col bg">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
                 </div>
-              </div>
+                <div class="col bg">
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </div>
+            </div>
         </div>
-
-    </div>
-    </div>
-</div>
-
-<!---------------------- login Modal ---------------------->
-
-<div class="modal fade" id="signUP" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                
-            <h5 class="modal-title createAcc" id="staticBackdropLabel">Create Account</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            
-            </div>
-            <div class="modal-body ">
-
-    <!------------------- form sign up ------------------->
-        <form class="row g-3 bg ">
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputMobileNumber" class="form-label">Mobile Number</label>
-                    </div>
-                    <div class="col-8 bg">
-                        <input type="text" class="form-control" id="inputMobileNumber" placeholder="Mobile Number"> 
-                    </div>
+        <div class="col cont bg">
+            <div class="row MailCont mt-2 ">
+                <div class="col-md-4 bg">
+                    <p><i class="fa-solid fa-phone"></i>Dial :</p>
                 </div>
-                  
-            </div>
-
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputMobileNumber" class="form-label">E-mail Address</label>
-                    </div>
-                    <div class="col-8 bg">
-                         <input type="email" class="form-control" id="inputEmail4" placeholder="E-mail Address">
-                    </div>
-                </div>                  
-            </div>
-
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                    </div>
-                    <div class="col-8 bg">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                    </div>
-                </div>                  
-            </div>
-
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputPassword4" class="form-label">Confirm Password</label>            
-                    </div>
-                    <div class="col-8 bg">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password">
-                    </div>
-                </div>                  
-            </div>
-
-
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="gender" class="form-label">Select Gender </label>            
-                    </div>
-                    <div class="col-8 bg">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="others">
-                            <label class="form-check-label" for="inlineRadio1">Others</label>
-                          </div>
-                    </div>
-                </div>                  
-            </div>
-
-
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-2 bg">
-                        <label for="type-of-patent" class="form-label">Type</label>
-                    </div>
-                    <div class="col-md-3 bg">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="inpatient">
-                            <label class="form-check-label" for="inlineCheckbox1">In-Patient</label>
-                          </div>           
-                    </div>
-                    <div class="col-md-4 bg">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="outpatient">
-                            <label class="form-check-label" for="inlineCheckbox1">Out-Patient</label>
-                          </div>
-                    </div>
-                    <div class="col-md-3 bg">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="emergency">
-                            <label class="form-check-label" for="inlineCheckbox1">Emergency</label>
-                          </div>
-                    </div>
-                </div>                  
-            </div>
-
-
-
-
-            
-
-            <div class="col-12">
-                <label for="inputEmail4" class="form-label">Address</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Address">
-            </div>          
-            
-            <div class="col-md-5">
-            <label for="inputCity" class="form-label">State</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="State">
-            </div>
-            <div class="col-md-4">
-            <label for="inputState" class="form-label">Nationality</label>
-            <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>Indian</option>
-                <option>Others...</option>
-            </select>
-            </div>
-            <div class="col-md-3">
-            <label for="inputZip" class="form-label">Pincode</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="Pincode">
-            </div>
-
-            <div class="col-12">            
-                <div class="row">
-                  <div class="col-sm-5">
-                    <button type="reset" class="btn btn-outline-warning">Reset</button>
-                  </div>
-                  <div class="col">
-                    
-                  </div>
-                  <div class="col-sm-5" style="text-align: right;">
-                    <button type="submit" class="btn btn-primary">Have Account</button>
-                  </div>
+                <div class="col-md-6 bg">
+                    <p> +91-9634728456</p>
                 </div>
-              
             </div>
-        </form>
-    
-        </div>
+
+            <div class="row MailCont ">
+                <div class="col-md-4 bg">
+                    <p><i class="fa-regular fa-envelope"></i> email :</p>
+                </div>
+                <div class="col-md-6 bg">
+                    <p>qweiyd@horizonshospital.org</p>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
 
+    <!----------------------------MODEL---------------------------->
 
-<!---------- forgot modal ----------->
+    <!----------------- login Modal ----------------->
+    <div class="modal fade" id="loginMod" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-<div class="modal fade" id="forgot" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                
-            <h5 class="modal-title" id="staticBackdropLabel">Forgot Account</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            
-            </div>
-            <div class="modal-body ">
+        <div class="modal-dialog">
 
-    <!------------------- form sign up ------------------->
-        <form class="row g-3 bg ">
+            <div class="modal-content">
 
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputMobileNumber" class="form-label">E-mail Address</label>
-                    </div>
-                    <div class="col-8 bg">
-                         <input type="email" class="form-control" id="inputEmail4"  placeholder="E-mail Address">
-                    </div>
-                </div>                  
-            </div>
+                <div class="modal-header">
 
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputPassword4" class="form-label">New Password</label>
-                    </div>
-                    <div class="col-8 bg">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="New Password">
-                    </div>
-                </div>                  
-            </div>
+                    <h5 class="modal-title welcome" id="staticBackdropLabel">Welcome To Horizon</h5>
 
-            <div class="col-12">                
-                <div class="row bg ">
-                    <div class="col-md-4 bg">
-                        <label for="inputPassword4" class="form-label">Confirm Password </label>            
-                    </div>
-                    <div class="col-8 bg">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password">
-                    </div>
-                </div>                  
-            </div>
-            
-
-            <div class="col-12">
-            
-                <div class="row">
-                  <div class="col-sm-5">
-                    <button type="reset" class="btn btn-outline-warning">Reset</button>
-                  </div>
-                  <div class="col">
-                    
-                  </div>
-                  <div class="col-sm-5" style="text-align: right;">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                  </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              
+
+                <div class="modal-body">
+                    <!------------------- form ------------------->
+                    <form>
+                        <div class="row mb-3 bg">
+                            <label for="inputEmail3" class="col-lg-3 col-form-label m-0">User Id</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="inputEmail3"
+                                    placeholder="Enter User Id or e-mail">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-lg-3  col-form-label">Password</label>
+                            <div class="col-lg-9">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Enter Passward">
+
+                            </div>
+                        </div>
+                        <button type="reset" class="btn btn-outline-warning mr">Reset</button>
+                        <button type="submit" class="btn btn-primary" onclick="loginBtn()">Sign in</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer bg">
+                    <div class="row">
+                        <div class="col-md-5 bg">
+                            <p>New User ? <a data-bs-toggle="modal" data-bs-target="#signUP">Sign up</a></p>
+                        </div>
+                        <div class="col-md-2 bg">
+
+                        </div>
+                        <div class="col-md-5 bg">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#forgot">Forgot Password ?</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </form>
-    
-        </div>
         </div>
     </div>
-</div>
 
-        
+    <!---------------------- login Modal ---------------------->
 
-
-<!---------------- Doctor Modal ----------------->
-    <!------ Dr.Ravi Kumar Modal ------->
-    <div class="modal fade" id="Dr.Ravi"   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
+    <div class="modal fade" id="signUP" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    
-                <h5 class="modal-title" id="staticBackdropLabel">Dr.Ravi Kumar</h5>
 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title createAcc" id="staticBackdropLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body ">
+
+                    <!------------------- form sign up ------------------->
+                    <form class="row g-3 bg ">
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputUserName" class="form-label">User Name</label>
+                                </div>
+                                <div class="col-8 bg">
+                                    <input type="text" class="form-control" id="inputName" placeholder="User Name">
+                                    <div id="namErr" style="display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputMobileNumber" class="form-label">Mobile Number</label>
+                                </div>
+                                <div class="col-8 bg">
+                                    <input type="text" class="form-control" id="inputMobileNumber"
+                                        placeholder="Mobile Number" maxlength="10">
+                                    <div id="noErr" style="display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputEmail" class="form-label">E-mail Address</label>
+                                </div>
+                                <div class="col-8 bg">
+                                    <input type="email" class="form-control" id="inputEmail"
+                                        placeholder="E-mail Address">
+                                    <div id="mailErr" style="display: none; "></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12 hideOnLogin">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputPassword" class="form-label">Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="inputPassword"
+                                        placeholder="Password">
+                                    <div class="passHide">
+                                        <a onclick="togglePassword(this)"><img id="imgTgl" src="images/passHIde-4.png"
+                                                alt=""> </a>
+                                    </div>
+                                    <div id="pasErr" style="display: none; " class="pasErr">test</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 hideOnLogin">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputPasswordCon" class="form-label">Confirm Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="inputPasswordCon"
+                                        placeholder="Confirm Password">
+                                    <div class="passHide">
+                                        <a onclick="togglePassword(this)"><img id="imgTgl" src="images/passHIde-4.png"
+                                                alt=""> </a>
+                                    </div>
+                                    <div id="conPas" style="display: none; " class="pasErr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="gender" class="form-label">Select Gender </label>
+                                </div>
+                                <div class="col-8 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male"
+                                            value="male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female"
+                                            value="female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="others"
+                                            value="others">
+                                        <label class="form-check-label" for="others">Others</label>
+                                    </div>
+                                    <div id="genErr" style="display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-2 bg">
+                                    <label for="type-of-patent" class="form-label">Type</label>
+                                </div>
+                                <div class="col-md-3 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inpatient"
+                                            value="in_patient" name="patTyp">
+                                        <label class="form-check-label" for="inpatient">In-Patient</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="outpatient"
+                                            value="out_patient" name="patTyp">
+                                        <label class="form-check-label" for="outpatient">Out-Patient</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="emergency" value="emergency"
+                                            name="patTyp">
+                                        <label class="form-check-label" for="emergency">Emergency</label>
+                                    </div>
+                                </div>
+                                <div id="patErr" style="display: none;"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Address">
+                        </div>
+                        <div id="addErr" style="display: none;"></div>
+
+                        <div class="col-md-5">
+                            <label for="inputCity" class="form-label">State</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="State">
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Nationality</label>
+                            <select id="inputState" class="form-select">
+                                <option selected value="">select nationality....</option>
+                                <option value="Indian">Indian</option>
+                                <option value="NRI">NRI</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <label for="inputZip" class="form-label">Pincode</label>
+                            <input type="text" class="form-control" id="inputZip" placeholder="Pincode" maxlength="6">
+                        </div>
+
+                        <div id="detErr" style="display: none;"></div>
+
+                        <div class="col-12 hideOnLogin">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                                <div class="col-sm-5" style="text-align: right;">
+
+                                    <button type="button" class="btn btn-primary" onclick="validate()"
+                                        value="Create Account">Create Account</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class=" bg" id="updBtn" style="display:none; justify-content: center; ">
+                            <button type="button" style="justify-content: center;" class="btn btn-outline-success"
+                                onclick="updateAcc()" value="Create Account">Update Account</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer  hideOnLogin bg">
+                    <div class="row">
+                        <div class="col bg">
+                            <p>Already have Account ? <a data-bs-toggle="modal" data-bs-target="#loginMod">Sign
+                                    In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------- forgot modal ----------->
+
+    <div class="modal fade" id="forgot" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="staticBackdropLabel">Forgot Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body ">
+
+                    <!------------------- form sign up ------------------->
+                    <form class="row g-3 bg ">
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="inputEmail4" class="form-label">E-mail Address</label>
+                                </div>
+                                <div class="col-8 bg">
+                                    <input type="email" class="form-control" id="inputEmail4"
+                                        placeholder="E-mail Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="forgotPass" class="form-label">New Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="forgotPass"
+                                        placeholder="New Password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="conForgotPass" class="form-label">Confirm Password </label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="conForgotPass"
+                                        placeholder="Confirm Password">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                                <div class="col-sm-5" style="text-align: right;">
+                                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#loginMod">Sign in</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!----------------- user modal ----------------->
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="userModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body dataVMod col-12">
+
+                    <div class=" col-12">
+                        <table class="table" id="complete" style="display: block;">
+                            <tbody>
+
+                                <tr>
+                                    <td colspan="2" style="text-align: center;">
+                                        <div class="userImage">
+                                            <img src="images/user.jpeg" alt="user">
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr class="">
+
+                                    <th scope="col">Titel</th>
+                                    <th scope="col">Details</th>
+
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td id="nmDn"></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">contact number</th>
+                                    <td id="noDn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">E-mail</th>
+                                    <td id="emDn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gender</th>
+                                    <td id="gDn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">type-of-patent</th>
+                                    <td id="SkDn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Address</th>
+                                    <td id="AdIn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">State</th>
+                                    <td id="StIn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nativity</th>
+                                    <td id="naIn"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Pin Code</th>
+                                    <td id="naDn"></td>
+                                </tr>
+
+
+
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" style="text-align: center;">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#signUP" onclick="editUser()">Edit</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------- Change Password Modal ---------------------->
+
+    <div class="modal fade" id="chaPassMod" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5 class="modal-title createAcc" id="staticBackdropLabel">Edit Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body ">
+
+                    <!------------------- form sign up ------------------->
+                    <form class="row g-3 bg ">
+
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="oldPassword" class="form-label">Old Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="oldPassword"
+                                        placeholder="Old Password">
+                                    <div class="passHide">
+                                        <a onclick="togglePassword(this)"><img id="imgTgl" src="images/passHIde-4.png"
+                                                alt=""> </a>
+                                    </div>
+
+                                    <div id="oldPasErr" style="display: none;" class="pasErr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="ChaNewPassword" class="form-label">New Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="ChaNewPassword"
+                                        placeholder="New Password">
+                                    <div class="passHide">
+                                        <a onclick="togglePassword(this)"><img id="imgTgl" src="images/passHIde-4.png"
+                                                alt=""> </a>
+                                    </div>
+                                    <div id="newPasErr" style="display: none; " class="pasErr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-4 bg">
+                                    <label for="newPasswordCon" class="form-label">Confirm Password</label>
+                                </div>
+                                <div class="col-8 pasHei bg">
+                                    <input type="password" class="form-control" id="newPasswordCon"
+                                        placeholder="Confirm Password">
+                                    <div class="passHide">
+                                        <a onclick="togglePassword(this)"><img id="imgTgl" src="images/passHIde-4.png"
+                                                alt=""> </a>
+                                    </div>
+                                    <div id="newConPasErr" style="display: none; " class="pasErr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                                <div class="col-sm-5" style="text-align: right;">
+
+                                    <button type="button" class="btn btn-primary" onclick="updatePass()"
+                                        value="Create Account">Confirm Password</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!---------------- Doctor Modal ----------------->
+    <!------ Dr.Ravi Kumar Modal ------->
+    <div class="modal fade" id="Dr.Ravi" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="staticBackdropLabel">Dr.Ravi Kumar</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 </div>
                 <div class="modal-body row">
@@ -656,201 +1016,315 @@
                         <img src="images/OrthoDr.jpeg" alt="">
                     </div>
                     <div class="col-3"></div>
-  
+
                     <div class="modPara col-5">
                         <p><b>Name: </b>Ravi Kumar </p>
                         <p><b>Specialities: </b>Orthopedics </p>
                         <p><b>Experience: </b> 14 Years </p>
                     </div>
                 </div>
-                
+
             </div>
-            </div>
+        </div>
     </div>
 
- <!------ Dr.Balakrishnan Modal ------->
- <div class="modal fade" id="Dr.Bala"   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Dr.Balakrishnan</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-        <div class="modal-body row">
-            <div class="modImg col-6">
-                <img src="images/CardioDr.jpeg" alt="">
-            </div>
+    <!------ Dr.Balakrishnan Modal ------->
+    <div class="modal fade" id="Dr.Bala" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Dr.Balakrishnan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row">
+                    <div class="modImg col-6">
+                        <img src="images/CardioDr.jpeg" alt="">
+                    </div>
 
-            <div class="modPara col-6">
-                <p><b>Name:</b>Balakrishnan </p>
-                <p><b>Specialities: </b>Cardiology </p>
-                <p><b> Experience:</b> 35 Years </p>
+                    <div class="modPara col-6">
+                        <p><b>Name:</b>Balakrishnan </p>
+                        <p><b>Specialities: </b>Cardiology </p>
+                        <p><b> Experience:</b> 35 Years </p>
+                    </div>
+                </div>
+
             </div>
-        </div>
-            
-        </div>
         </div>
     </div>
 
     <!------ Dr.Buvana Modal ------->
- <div class="modal fade" id="Dr.Buvana"   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Dr.Buvana</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-        <div class="modal-body row">
-            <div class="modImg col-6">
-                <img src="images/PerdiatitionDr.jpeg" alt="">
-            </div>
+    <div class="modal fade" id="Dr.Buvana" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Dr.Buvana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row">
+                    <div class="modImg col-4">
+                        <img src="images/PerdiatitionDr.jpeg" alt="">
+                    </div>
+                    <div class="col-3"></div>
 
-            <div class="modPara col-6">
-                <p><b>Name:</b>Buvana</p>
-                <p><b>Specialities: </b>Prediatition </p>
-                <p><b> Experience:</b> 11 Years </p>
+                    <div class="modPara col-5">
+                        <p><b>Name:</b>Buvana</p>
+                        <p><b>Specialities: </b>Prediatition </p>
+                        <p><b> Experience:</b> 11 Years </p>
+                    </div>
+                </div>
+
             </div>
-        </div>
-            
-        </div>
         </div>
     </div>
 
 
     <!------ Dr.Pal Manikam Modal ------->
- <div class="modal fade" id="Dr.Pal"   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Dr.Pal Manikam</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="Dr.Pal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Dr.Pal Manikam</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row">
+                    <div class="modImg col-6">
+                        <img src="images/GastroDr.jpeg" alt="">
+                    </div>
+
+                    <div class="modPara col-6">
+                        <p><b>Name:</b>Pal Manikam </p>
+                        <p><b>Specialities: </b>Gastroenterologist </p>
+                        <p><b> Experience:</b> 15 Years </p>
+                    </div>
+                </div>
+
             </div>
-        <div class="modal-body row">
-            <div class="modImg col-6">
-                <img src="images/GastroDr.jpeg" alt="">
-            </div>
-         
-            <div class="modPara col-6">
-                <p><b>Name:</b>Pal Manikam </p>
-                <p><b>Specialities: </b>Gastroenterologist </p>
-                <p><b> Experience:</b> 15 Years </p>
-            </div>
-        </div>
-            
-        </div>
         </div>
     </div>
 
-     <!------ Dr.Balamurali Modal ------->
- <div class="modal fade" id="Dr.Balamurali"   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Dr.Balamurali</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!------ Dr.Balamurali Modal ------->
+    <div class="modal fade" id="Dr.Balamurali" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Dr.Balamurali</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row">
+                    <div class="modImg col-6">
+                        <img src="images/SurgeonSpinal.jpeg" alt="">
+                    </div>
+
+                    <div class="modPara col-6">
+                        <p><b>Name:</b>Balamurali </p>
+                        <p><b>Specialities: </b>Neurosurgeons </p>
+                        <p><b> Experience:</b> 10 Years </p>
+                    </div>
+                </div>
+
             </div>
-        <div class="modal-body row">
-            <div class="modImg col-6">
-                <img src="images/SurgeonSpinal.jpeg" alt="">
+        </div>
+    </div>
+    <!---------------- Specialities Modal ----------------->
+
+    <!------ Gastroenterologist Modal ------->
+
+    <div class="modal fade" id="eeg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Gastroenterologist</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body equipBody">
+
+                    <div class="equipImage">
+                        <img src="images/SpecGastro.jpeg" alt=" EEG Moniter">
+                    </div>
+
+                    <div class="equipDisc">
+                        <p>A gastroenterologist is a specialist in gastrointestinal diseases. Gastroenterologists treat
+                            all the organs in your digestive system, including your GI tract (esophagus, stomach and
+                            intestines) and biliary organs (your liver, bile ducts, pancreas and gallbladder.)</p>
+                    </div>
+
+                </div>
+
             </div>
+        </div>
+    </div>
 
-            <div class="modPara col-6">
-                <p><b>Name:</b>Balamurali </p>
-                <p><b>Specialities: </b>Neurosurgeons </p>
-                <p><b> Experience:</b> 10 Years </p>
+
+    <!------ Cardiologist Modal ------->
+
+    <div class="modal fade" id="tavr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cardiologist</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body equipBody">
+
+                    <div class="equipImage">
+                        <img src="images/EquiTranscatheterAorticValveReplacement.jpeg" alt="TAVR Equipment">
+                    </div>
+
+                    <div class="equipDisc">
+                        <p>
+                            A cardiologist is a physician who's an expert in the care of your heart and blood vessels.
+                            They can treat or help you prevent a number of cardiovascular problems. They can also
+                            specialize in specific areas, such as abnormal heart rhythms, heart failure or heart
+                            problems you've had since birth</p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
-            
-        </div>
+    </div>
+
+
+    <!------ Orthopedist Modal ------->
+
+    <div class="modal fade" id="mri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Orthopedist</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body equipBody">
+
+                    <div class="equipImage">
+                        <img src="images/SpecOrtho.jpeg" alt="Orthopedist">
+                    </div>
+
+                    <div class="equipDisc">
+                        <p>Orthopaedic surgeons are devoted to the prevention, diagnosis, and treatment of disorders of
+                            the bones, joints, ligaments, tendons and muscles. Some orthopaedists are generalists, while
+                            others specialize in certain areas of the body, such as: Hip and knee.</p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
-<!---------------- Specialities Modal ----------------->
 
-<!------ Gastroenterologist Modal ------->
+    <!---------------- Booking Modal ----------------->
 
-<div class="modal fade" id="eeg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Gastroenterologist</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body equipBody">
+    <!------ bookDr.Ravi Modal ------->
 
-        <div class="equipImage">
-            <img src="images/SpecGastro.jpeg"  alt=" EEG Moniter">
+    <div class="modal fade" id="bookDr.Ravi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Book your Appontment</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <table class="table">
+
+                            <tbody>
+                                <tr>
+                                    <th><label for="day" class="form-label">select date:</label></th>
+                                    <td><input type="date" id="day" name="day" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="time" class="form-label">Choose Time :</label></th>
+                                    <td><input type="time" id="time" name="time" class="form-control"></td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <th><label for="type-of-patent" class="form-label">Type</label></th>
+
+                                    <td><input class="form-check-input" type="checkbox" id="inpatient"
+                                            value="in_patient" name="patTyp">
+                                        <label class="form-check-label" for="inpatient">In-Patient</label>
+                                    </td>
+
+                                    <td> <input class="form-check-input" type="checkbox" id="outpatient"
+                                            value="out_patient" name="patTyp">
+                                        <label class="form-check-label" for="outpatient">Out-Patient</label>
+                                    </td>
+
+                                    <td><input class="form-check-input" type="checkbox" id="emergency" value="emergency"
+                                            name="patTyp">
+                                        <label class="form-check-label" for="emergency">Emergency</label>
+                                    </td>
+
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        <div class="col-12">
+                            <div class="row bg ">
+                                <div class="col-md-2 bg">
+                                    <label for="type-of-patent" class="form-label">Type</label>
+                                </div>
+                                <div class="col-md-3 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="BoRavInPat"
+                                            value="Ravi in_patient" name="patTyp">
+                                        <label class="form-check-label" for="BoRavInPat">In-Patient</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="BoRavOuPat"
+                                            value="Ravi outpatient" name="patTyp">
+                                        <label class="form-check-label" for="BoRavOuPat">Out-Patient</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 bg">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="BoRavReg"
+                                            value="Ravi regular Checkup" name="patTyp">
+                                        <label class="form-check-label" for="BoRavReg">regular Checkup</label>
+                                    </div>
+                                </div>
+                                <div id="patErr" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="RavPur" class="form-label">Purpose Of visit</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select id="RavPur" class="form-select">
+                                    <option selected value="">select purpose....</option>
+                                    <option value="Indian">Gendral Checkup</option>
+                                    <option value="NRI">NRI</option>
+                                    <option value="others">others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer center">
+
+                    <button type="button" class="btn btn-primary">Book</button>
+
+                </div>
+            </div>
         </div>
-
-        <div class="equipDisc">
-         <p>A gastroenterologist is a specialist in gastrointestinal diseases. Gastroenterologists treat all the organs in your digestive system, including your GI tract (esophagus, stomach and intestines) and biliary organs (your liver, bile ducts, pancreas and gallbladder.)</p>
-        </div>
-
-      </div>
-      
     </div>
-  </div>
-</div>
 
-
-<!------ Cardiologist Modal ------->
-
-<div class="modal fade" id="tavr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Cardiologist</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          
-        </div>
-        <div class="modal-body equipBody">
-  
-          <div class="equipImage">
-              <img src="images/EquiTranscatheterAorticValveReplacement.jpeg" alt="TAVR Equipment">
-          </div>
-  
-          <div class="equipDisc">
-           <p>
-            A cardiologist is a physician who's an expert in the care of your heart and blood vessels. They can treat or help you prevent a number of cardiovascular problems. They can also specialize in specific areas, such as abnormal heart rhythms, heart failure or heart problems you've had since birth</p>
-          </div>
-  
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-
-<!------ Orthopedist Modal ------->
-
-<div class="modal fade" id="mri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Orthopedist</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body equipBody">
-  
-          <div class="equipImage">
-              <img src="images/SpecOrtho.jpeg"  alt="Orthopedist">
-          </div>
-  
-          <div class="equipDisc">
-           <p>Orthopaedic surgeons are devoted to the prevention, diagnosis, and treatment of disorders of the bones, joints, ligaments, tendons and muscles. Some orthopaedists are generalists, while others specialize in certain areas of the body, such as: Hip and knee.</p>
-          </div>
-  
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
-    
 
 
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="hospital1.js"></script>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 </html>
